@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>世界杯 · 延伸阅读与查询笔记</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f4f9fc;
+            color: #1b2f3c;
+            line-height: 1.7;
+            padding: 1.5rem 1rem 3rem;
+            min-height: 100vh;
+        }
+
+        .page-grid {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        /* 卡片网格 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
+            margin: 0.5rem 0;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 1.5rem 1.4rem;
+            box-shadow: 0 4px 12px rgba(0, 40, 50, 0.06);
+            border: 1px solid #dceef5;
+            transition: box-shadow 0.2s, transform 0.1s;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0, 70, 90, 0.08);
+            transform: translateY(-1px);
+        }
+
+        .card-highlight {
+            background: #e4f3f8;
+            border-left: 4px solid #1d7f8c;
+            border-radius: 16px;
+            padding: 1.2rem 1.4rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #0a3b47;
+            margin-bottom: 0.3rem;
+            line-height: 1.2;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #3a6b78;
+            margin-bottom: 0.8rem;
+            font-weight: 400;
+            border-bottom: 1px solid #cde4ec;
+            padding-bottom: 0.8rem;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #0a4b5a;
+            margin: 1.8rem 0 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        h2:first-child {
+            margin-top: 0;
+        }
+
+        p {
+            margin: 0.9rem 0;
+            font-size: 1rem;
+            color: #1f3e4a;
+        }
+
+        .dropcap {
+            font-size: 1.1rem;
+        }
+
+        .quote-note {
+            background: #f0f8fc;
+            border-radius: 18px;
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+            border: 1px solid #b6dbe7;
+            font-size: 0.98rem;
+            color: #1f4a57;
+            position: relative;
+        }
+
+        .quote-note::before {
+            content: "📌 延伸提示";
+            display: block;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 0.02em;
+            color: #1d7f8c;
+            margin-bottom: 0.4rem;
+        }
+
+        .faq-item {
+            margin: 0.8rem 0;
+        }
+
+        .faq-item strong {
+            color: #035d6b;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.15rem;
+        }
+
+        .highlight-link {
+            color: #1a7e8c;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #b3dae6;
+            transition: border-color 0.2s, background 0.1s;
+        }
+
+        .highlight-link:hover {
+            border-bottom-color: #1a7e8c;
+            background: #e2f0f5;
+        }
+
+        .inline-link {
+            color: #06788b;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #b8dbe7;
+        }
+
+        .inline-link:hover {
+            border-bottom: 2px solid #0a7f8e;
+        }
+
+        .visit-line {
+            margin: 2rem 0 0.8rem;
+            font-size: 1.05rem;
+            background: #f0f9fb;
+            padding: 1rem 1.4rem;
+            border-radius: 40px;
+            text-align: center;
+            border: 1px solid #ccdee8;
+            color: #0f4452;
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #5b8593;
+            margin-top: 1.5rem;
+            border-top: 1px solid #d4e5ed;
+            padding-top: 1.5rem;
+        }
+
+        /* 响应式卡片网格 */
+        @media (min-width: 540px) {
+            .card-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 720px) {
+            body {
+                padding: 2.5rem 2rem 4rem;
+            }
+
+            h1 {
+                font-size: 2.4rem;
+            }
+
+            .card {
+                padding: 1.8rem 1.6rem;
+            }
+        }
+
+        /* 移动端更舒适 */
+        @media (max-width: 380px) {
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            .visit-line {
+                font-size: 0.95rem;
+                padding: 0.8rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-grid">
+        <header>
+            <h1>世界杯 · 日常查询笔记</h1>
+            <div class="subhead">从问答、对照到延伸阅读</div>
+            <p class="dropcap">翻阅资料时，总会回到几个基本问题：赛制如何演变？哪些球队保持连胜纪录？又或者，如何快速定位一届赛事的具体数据？这个页面像一张工作台，把关于<a href="https://index-united2026.com" class="inline-link">世界杯</a>的零散查询点串联起来，供后续对照和拓展。</p>
+        </header>
+
+        <div class="card-grid">
+            <div class="card">
+                <h2>📋 阶段与赛制</h2>
+                <p>从1930年13支参赛队到如今的48队扩容，赛制调整一直是讨论焦点。2026年将首次采用48队分12组、每组前两名及部分第三名出线的模式。日常查询时，分组抽签档位、淘汰赛路径图是常见需求。</p>
+            </div>
+            <div class="card">
+                <h2>📊 数据对照</h2>
+                <p>累计进球、出场次数、冠亚军分布——这些基础统计常被用作背景参考。比如巴西五次夺冠、德国八次进入决赛，而单届进球纪录保持者（13球）仍由方丹保持。数据背后能看到不同时代的战术倾向。</p>
+            </div>
+        </div>
+
+        <div class="card-full card-highlight">
+            <p><strong>🗂️ 一个常用的查询路径</strong>：先确认赛事年份与主办国，再查看小组赛积分榜，然后对比淘汰赛对阵与最终结果。如果需要追溯某场比赛的阵容或裁判，往往要回到当届官方报告或比赛档案。这也是为什么把<a href="https://index-united2026.com" class="highlight-link">世界杯</a>相关链接集中到一处——方便从概要跳到细节。</p>
+        </div>
+
+        <div>
+            <h2>🔍 三组延伸阅读片段</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <p><strong>· 关于纪录</strong><br>最快进球（11秒）、最大分差（9‑0）、连续不败场次（意大利 37场）——这些数字常被收录在 trivia 列表里，但放在具体赛事背景下更有意义。例如 1954 年瑞士世界杯出现场均 5.38 球的高产局面。</p>
+                </div>
+                <div class="card">
+                    <p><strong>· 关于主办</strong><br>世界杯曾由 17 个国家单独或联合主办。2026 年将由美国、加拿大、墨西哥联合举办，这是首次三国合办。从场馆分布到时区差异，都会影响观赛和报道节奏。</p>
+                </div>
+            </div>
+            <div class="quote-note">
+                <p>如果你在查找某一届比赛的具体资料时感到信息分散，不妨以年份+关键词（例如“1978 世界杯 第二轮小组赛”）重新过滤。很多官方统计需要对照多个来源。而<a href="https://index-united2026.com" class="inline-link">世界杯</a>索引页可以作为出发站点，把常见资源归拢在同一层级下。</p>
+            </div>
+        </div>
+
+        <div>
+            <h2>❓ 常见查询摘要</h2>
+            <div class="faq-item">
+                <strong>哪支球队拥有最多世界杯冠军？</strong>
+                <p>巴西（5次），其次德国和意大利（各4次）。阿根廷、乌拉圭、法国（各2次），英格兰、西班牙（各1次）。</p>
+            </div>
+            <div class="faq-item">
+                <strong>2026年世界杯赛制有何不同？</strong>
+                <p>48支球队分为12组，每组4队。小组前两名和8个成绩最好的第三名晋级32强淘汰赛。比赛总场次增至80场。</p>
+            </div>
+            <div class="faq-item">
+                <strong>最佳射手纪录属于谁？</strong>
+                <p>米洛斯拉夫·克洛泽（德国）保持总进球纪录（16球）。单届最高进球为13球，由朱斯特·方丹在1958年创造。</p>
+            </div>
+        </div>
+
+        <div class="visit-line">
+            🌐 如需集中浏览赛事、球队和统计，可参考 <a href="https://index-united2026.com" class="highlight-link">世界杯</a> 相关页面，按年份或主题索引。
+        </div>
+
+        <div class="footer-note">
+            <span>日常查询 · 对照参考 · 非官方资料整理</span><br>
+            <span style="font-size:0.8rem; opacity:0.7;">信息基于公开数据，更新至2025年</span>
+        </div>
+    </div>
+</body>
+</html>
